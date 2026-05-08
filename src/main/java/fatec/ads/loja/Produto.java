@@ -1,10 +1,14 @@
 package fatec.ads.loja;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import org.springframework.stereotype.Component;
 
 @Component
+@Entity
 public class Produto {
 
+    @Id
     private int codigo;
     private String nome;
     private String descritivo;
@@ -12,6 +16,7 @@ public class Produto {
     private double promo;
     private int quantidade;
     private String keywords;
+    private int destaque;
 
     public int getCodigo() {
         return codigo;
@@ -54,6 +59,12 @@ public class Produto {
     }
     public void setKeywords(String keywords) {
         this.keywords = keywords;
+    }
+    public int getDestaque() {
+        return destaque;
+    }
+    public void setDestaque(int destaque) {
+        this.destaque = destaque;
     }
 
 }
